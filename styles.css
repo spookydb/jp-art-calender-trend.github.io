@@ -73,6 +73,8 @@ h2 { font-size: 1.35rem; letter-spacing: -0.02em; }
   color: var(--ink);
   font: inherit;
 }
+.search-box:has(input:disabled) { opacity: 0.65; }
+.search-box input:disabled { cursor: wait; }
 
 .table-card {
   overflow: hidden;

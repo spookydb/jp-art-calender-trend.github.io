@@ -6,7 +6,6 @@
     <meta name="description" content="A searchable public information table." />
     <title>Information Calendar</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="data.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -14,7 +13,9 @@
       <header class="site-header">
         <p class="eyebrow">PUBLIC REFERENCE</p>
         <h1 id="site-title">Information Calendar</h1>
-        <p id="site-introduction" class="introduction"></p>
+        <p class="introduction">
+          This public page collects useful dates and information in one searchable place.
+        </p>
       </header>
 
       <section class="table-section" aria-labelledby="table-heading">
@@ -28,7 +29,7 @@
             <svg aria-hidden="true" viewBox="0 0 24 24">
               <path d="m21 21-4.4-4.4m2.4-5.1a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
             </svg>
-            <input id="search-input" type="search" placeholder="Search entries…" autocomplete="off" />
+            <input id="search-input" type="search" placeholder="Search entries…" autocomplete="off" disabled />
           </label>
         </div>
 
@@ -42,6 +43,10 @@
           <div id="empty-state" class="empty-state" hidden>
             <strong>No matching entries</strong>
             <span>Try a different word or clear the search.</span>
+          </div>
+          <div id="status-state" class="empty-state" role="status">
+            <strong>Loading entries…</strong>
+            <span>Reading the latest information from Google Sheets.</span>
           </div>
         </div>
       </section>
