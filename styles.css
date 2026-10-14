@@ -43,6 +43,14 @@ h2 { font-size: 1.35rem; letter-spacing: -0.02em; }
 .introduction { margin: 1rem 0 0; color: var(--muted); font-size: 1.05rem; }
 
 .table-section { margin-top: clamp(2.5rem, 6vw, 5rem); }
+.site-footer {
+  margin-top: clamp(2.5rem, 6vw, 5rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.site-footer p { margin: 0; }
 .table-toolbar {
   display: flex;
   align-items: end;
